@@ -1,20 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: argocd
+  name: loki
   namespace: argo
   labels:
     cluster: c3
-    app: argocd
+    app: loki
 spec:
   project: default
   source:
     repoURL: https://github.com/filipSamanek/skoleni.git
     targetRevision: HEAD
-    path: argo/cd
+    path: loki
   destination:
     name: in-cluster
-    namespace: argo
+    namespace: loki
   syncPolicy:
     syncOptions:
     - Validate=true
