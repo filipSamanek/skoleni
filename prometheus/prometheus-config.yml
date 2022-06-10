@@ -290,7 +290,7 @@ scrape_configs:
     action: replace
   - target_label: __address__
     replacement: blackbox-exporter
-   action: replace
+    action: replace
 
 
 - job_name: blackbox-icmp
